@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 </html>
 <head>
-	<title>Escuelas en Puebla</title>
+  <title>Escuelas en Puebla</title>
   <link rel="stylesheet" type="text/css" href="Script/interfaz.css">
-	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD58YikEK-bFGRqilYtUUpwQW8HZ5zxeuQ&sensor=false">//Importa la biblioteca 'Google Maps'
-	</script>
-	<script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> //Importa la biblioteca 'jQuery/Ajax'
-	</script>
+  <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD58YikEK-bFGRqilYtUUpwQW8HZ5zxeuQ&sensor=false">//Importa la biblioteca 'Google Maps'
+  </script>
+  <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> //Importa la biblioteca 'jQuery/Ajax'
+  </script>
   <script type="text/javascript" src="Script/informacionEscuelas.js"></script><!-- Clase de "arregloEscuelas" -->
   <script type="text/javascript" src="Script/procesosEscuelas.js"></script>
   <script type="text/javascript"> //Variables globales
@@ -25,12 +25,12 @@
   </script>
 </head>
 <body onload="procesosEscuelas.obtenerInformacion()">
-	<div id="header">
-		<h1 id="titulo">Escuelas de nivel basico en el estado de Puebla</h1>
-		<a href="http://codeandomexico.org/"><img id="cmLogo" src="imagenes/cmx_icon.jpg" alt="Codeando Mexico logo"/></a>
-	</div>
-	<div id="googleMap" onload="initialize()">
-	</div>
+  <div id="header">
+    <h1 id="titulo">Escuelas de nivel basico en el estado de Puebla</h1>
+    <a href="http://codeandomexico.org/"><img id="cmLogo" src="imagenes/cmx_icon.jpg" alt="Codeando Mexico logo"/></a>
+  </div>
+  <div id="googleMap" onload="initialize()">
+  </div>
   <div id="cuadro">
     <h3>Informacion</h3>
     <table>
@@ -80,26 +80,26 @@
       </tr>
     </table>
   </div>
-	<script>
-		/*Obtiene la cantidad de escuelas registradas*/
-		$(document).ready(function(){
-			var data = {
-    		resource_id: '72132d45-cae9-446e-8366-a7654ec1d930', //id del API del cual se esta obteniendo la informacion
-  			};
-  			$.ajax({
-  				type:'Get',
-    			url: 'http://datamx.io/api/action/datastore_search',
-    			data: data,
-    			dataType: 'jsonp',
-    			success: function(data) { //En caso de que se encuentre la informacion solicitada, desplegara lo siguiente
-      			document.getElementById("totalEscuelas").innerHTML=data.result.total //Regresa el total de escuelas y comprueba que la conexion fue establecida correctamente
-    			}
-  			});
-		});
-	</script>
-	<div id="left_side-bar">
-		<h1 class="header">Total de Escuelas:</h1>
-		<h5 id="totalEscuelas"></h5>
+  <script>
+    /*Obtiene la cantidad de escuelas registradas*/
+    $(document).ready(function(){
+      var data = {
+        resource_id: '72132d45-cae9-446e-8366-a7654ec1d930', //id del API del cual se esta obteniendo la informacion
+        };
+        $.ajax({
+          type:'Get',
+          url: 'http://datamx.io/api/action/datastore_search',
+          data: data,
+          dataType: 'jsonp',
+          success: function(data) { //En caso de que se encuentre la informacion solicitada, desplegara lo siguiente
+            document.getElementById("totalEscuelas").innerHTML=data.result.total //Regresa el total de escuelas y comprueba que la conexion fue establecida correctamente
+          }
+        });
+    });
+  </script>
+  <div id="left_side-bar">
+    <h1 class="header">Total de Escuelas:</h1>
+    <h5 id="totalEscuelas"></h5>
     <input id="busqueda" value="Buscar por nombre"></input><button id="boton_busqueda" onclick="buscar()">Iniciar</button>
     <script>
     $("#busqueda").keyup(function(event){ //Presiona automaticamente el "boton_busqueda" al momento en el que el usuario presiona enter en el cuadro de texto
@@ -157,7 +157,7 @@
         <p id="seleccion"></p>
       </div>
     </div>
-	</div>
+  </div>
   <div id="right_panel">
 
   </div>
