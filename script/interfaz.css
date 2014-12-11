@@ -32,10 +32,10 @@
   font-size:2em;
 }
 #cmLogo{  /*Parametros para la imagen llamada "cmLogo"*/
-  height:100px;
-  margin-right:100px;
-  position:absolute;
-  border-radius: 100%;
+height:100px;
+margin-right:100px;
+position:absolute;
+border-radius: 100%;
 }
 #googleMap{  /*Parametros para la posicion de mapa*/
   width:50%;
@@ -48,7 +48,7 @@
   border:4px dashed black;
 }
 #googleMap:hover{  /*Parametros para el mapa en caso de que el cursor pase sobre el*/
-    border:4px dashed green;
+  border:4px dashed green;
 }
 #cuadro{  /*Parametros para las propiedades de la escuela*/
   width: 20%;
@@ -64,8 +64,8 @@
   opacity: 1;
 }
 #right_panel{  /*Parametros para la seccion right_panel*/
-    margin-left:15%;
-    height: 100%;
+  margin-left:15%;
+  height: 100%;
 }
 #left_side-bar{  /*Parametros para la seccion donde se encuentra el mapa y las propiedades de la escuela*/
   width:20%;
@@ -83,25 +83,25 @@
   color:#00CC00;
 }
 #seleccion{
-    font-family: "Verdana";
-    background-color: blue;
+  font-family: "Verdana";
+  background-color: blue;
 }
 #busqueda{
-    font-family:"Verdana", Georgia,Serif;
-    margin-left:10%;
-    width:40%;
-    border:1px dashed green;
+  font-family:"Verdana", Georgia,Serif;
+  margin-left:10%;
+  width:40%;
+  border:1px dashed green;
 }
 #busqueda:hover{
-    background-color:#00CC04;
-    border:1px dashed black;
+  background-color:#00CC04;
+  border:1px dashed black;
 }
 #boton_busqueda{
-    border: 1px dashed green;
+  border: 1px dashed green;
 }
 #boton_busqueda:hover{
-    background-color: #00CC04;
-    border: 1px dashed black;
+  background-color: #00CC04;
+  border: 1px dashed black;
 }
 #resultadosFont{
   font-family: Tahoma, sans-serif;
@@ -112,19 +112,19 @@
 }
 #resultados{
   overflow:auto;
-    height:300px;
-    width:100%;
-    border:2px dashed blue;
+  height:300px;
+  width:100%;
+  border:2px dashed blue;
 }
 .header{
   margin-left: 5%;
   font-family: Tahoma, Geneva, sans-serif;
-    font-size:100%;
+  font-size:100%;
 }
 body{  /*Parametros para el cuerpo en general*/
-    background-color:#00CC00;
-    background-image:url("/imagenes/backgoundPuebla.jpg");
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+  background-color:#00CC00;
+  background-image:url("/imagenes/backgoundPuebla.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
 }

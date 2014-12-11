@@ -14,12 +14,12 @@
     var procesosEscuelas = new procesosEscuelas();
     var registro = 0;
     var mapProp={ //esta variable establece los parametros que tendra el mapa
-        center:new google.maps.LatLng(19, -97.883333), //las cordenadas centran el mapa en puebla
-        zoom:10,
-        mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
+      center:new google.maps.LatLng(19, -97.883333), //las cordenadas centran el mapa en puebla
+      zoom:10,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
     function initialize(){ //genera el mapa de google maps
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp); //ubica el mapa en el <div> con Id "googleMap"
+      var map=new google.maps.Map(document.getElementById("googleMap"),mapProp); //ubica el mapa en el <div> con Id "googleMap"
     }
     google.maps.event.addDomListener(window,'load',initialize);
   </script>
@@ -29,8 +29,7 @@
     <h1 id="titulo">Escuelas de nivel basico en el estado de Puebla</h1>
     <a href="http://codeandomexico.org/"><img id="cmLogo" src="imagenes/cmx_icon.jpg" alt="Codeando Mexico logo"/></a>
   </div>
-  <div id="googleMap" onload="initialize()">
-  </div>
+  <div id="googleMap" onload="initialize()"></div>
   <div id="cuadro">
     <h3>Informacion</h3>
     <table>
@@ -85,31 +84,32 @@
     $(document).ready(function(){
       var data = {
         resource_id: '72132d45-cae9-446e-8366-a7654ec1d930', //id del API del cual se esta obteniendo la informacion
-        };
-        $.ajax({
-          type:'Get',
-          url: 'http://datamx.io/api/action/datastore_search',
-          data: data,
-          dataType: 'jsonp',
-          success: function(data) { //En caso de que se encuentre la informacion solicitada, desplegara lo siguiente
-            document.getElementById("totalEscuelas").innerHTML=data.result.total //Regresa el total de escuelas y comprueba que la conexion fue establecida correctamente
-          }
-        });
+      };
+      $.ajax({
+        type:'Get',
+        url: 'http://datamx.io/api/action/datastore_search',
+        data: data,
+        dataType: 'jsonp',
+        success: function(data) { //En caso de que se encuentre la informacion solicitada, desplegara lo siguiente
+          document.getElementById("totalEscuelas").innerHTML=data.result.total //Regresa el total de escuelas y comprueba que la conexion fue establecida correctamente
+        }
+      });
     });
   </script>
   <div id="left_side-bar">
     <h1 class="header">Total de Escuelas:</h1>
     <h5 id="totalEscuelas"></h5>
-    <input id="busqueda" value="Buscar por nombre"></input><button id="boton_busqueda" onclick="buscar()">Iniciar</button>
+    <input id="busqueda" value="Buscar por nombre">
+    <button id="boton_busqueda" onclick="buscar()">Iniciar</button>
     <script>
-    $("#busqueda").keyup(function(event){ //Presiona automaticamente el "boton_busqueda" al momento en el que el usuario presiona enter en el cuadro de texto
-    if(event.keyCode == 13){
-        $("#boton_busqueda").click();
-      }
-    });
+        $("#busqueda").keyup(function(event){ //Presiona automaticamente el "boton_busqueda" al momento en el que el usuario presiona enter en el cuadro de texto
+        if(event.keyCode == 13){
+          $("#boton_busqueda").click();
+        }
+      });
     </script>
     <script type="text/javascript">
-    function buscar(){
+      function buscar(){
         $('.objBusqueda').remove();
         var elemento = document.getElementById("busqueda").value;
         var totalEscuelas = document.getElementById("totalEscuelas").innerHTML;
@@ -140,16 +140,16 @@
                 $("#y"+arregloEscuelas[x]._id).attr("onclick",funcion);
                 document.getElementById("y"+arregloEscuelas[x]._id).innerHTML = "Desplegar";
               }
-              }
             }
           }
-          if(encontrar){
-            document.getElementById("seleccion").innerHTML = "Lista de escuelas encontradas";
-          }
-          else{
-            document.getElementById("seleccion").innerHTML = "No hay resultados";
-          }
         }
+        if(encontrar){
+          document.getElementById("seleccion").innerHTML = "Lista de escuelas encontradas";
+        }
+        else{
+          document.getElementById("seleccion").innerHTML = "No hay resultados";
+        }
+      }
     </script>
     <div id="resultado">
       <h3 id="resultadosFont">Resultados</h3>
@@ -159,7 +159,6 @@
     </div>
   </div>
   <div id="right_panel">
-
   </div>
 </body>
 </html>
