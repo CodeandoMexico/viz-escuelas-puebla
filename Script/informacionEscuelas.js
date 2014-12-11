@@ -28,7 +28,7 @@ function informacionEscuelas(){
     this.formatoDomicilio = this.formatoDomicilio.replace(/&#243/,"o");
     this.formatoDomicilio = this.formatoDomicilio.replace(/&#250/,"u");
     this.formatoDomicilio = this.formatoDomicilio.replace(/&#252/,"u");
-  }
+  };
   this.domicilioACoordenadas = function(valor){  //Obtiene las coordenadas de la escuela
         var parametro = 'https://maps.googleapis.com/maps/api/geocode/json?'+'address='+this.formatoDomicilio+'&sensor=false';
         var data = 'AIzaSyD58YikEK-bFGRqilYtUUpwQW8HZ5zxeuQ';
@@ -44,7 +44,7 @@ function informacionEscuelas(){
               arregloEscuelas[registro].lng = data.results[0].geometry.location.lng;
             }
           });
-  }
+  };
   this.regresarInformacion = function(){ //Desplega la informacion de la escuela en la pantalla
     $("#id").html(this._id);
     $("#unidadQueAutoriza").html(this.unidadQueAutoriza);
@@ -57,7 +57,7 @@ function informacionEscuelas(){
     $("#vigenciaFin").html(this.vigenciaFin);
     $("#procedimientoDelOtorgamiento").html(this.procedimientoDelOtorgamiento);
     $("#contraprestacion").html(this.contraprestacion);
-  }
+  };
   this.marcadorMapa = function(){ //Ubica la escuela en el mapa con un 'pin'
     var mapProp = { //esta variable establece los parametros que tendra el mapa
     center:new google.maps.LatLng(this.lat,this.lng), //las cordenadas centran el mapa en puebla
@@ -68,13 +68,13 @@ function informacionEscuelas(){
       position: new google.maps.LatLng(this.lat,this.lng),
       map: new google.maps.Map(document.getElementById("googleMap"),mapProp),
       title: this.nombre
-    })
+    });
     this.regresarInformacion();
-  }
+  };
   this.posicionarMapa =function(valor){ //Accede a las demas funciones que ubicaran la escuela en el mapa
     registro = valor;
     this.cambioFormato();
     this.domicilioACoordenadas(valor);
     setTimeout('arregloEscuelas['+valor+'].marcadorMapa()',100);
-  }
-};
+  };
+}
