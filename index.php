@@ -2,13 +2,13 @@
 </html>
 <head>
   <title>Escuelas en Puebla</title>
-  <link rel="stylesheet" type="text/css" href="Script/interfaz.css">
+  <link rel="stylesheet" type="text/css" href="script/interfaz.css">
   <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD58YikEK-bFGRqilYtUUpwQW8HZ5zxeuQ&sensor=false">//Importa la biblioteca 'Google Maps'
   </script>
   <script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> //Importa la biblioteca 'jQuery/Ajax'
   </script>
-  <script type="text/javascript" src="Script/informacionEscuelas.js"></script><!-- Clase de "arregloEscuelas" -->
-  <script type="text/javascript" src="Script/procesosEscuelas.js"></script>
+  <script type="text/javascript" src="script/informacionEscuelas.js"></script><!-- Clase de "arregloEscuelas" -->
+  <script type="text/javascript" src="script/procesosEscuelas.js"></script>
   <script type="text/javascript"> //Variables globales
     var arregloEscuelas = []; //Declara un arreglo en el cual se almacenara el objeto "informacionEscuelas"
     var procesosEscuelas = new procesosEscuelas();
